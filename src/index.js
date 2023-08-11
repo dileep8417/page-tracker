@@ -3,6 +3,8 @@ const app = express();
 const trackRouter = require('./routes/pageTrack');
 require('dotenv').config();
 require('./db').connect();
+const cors = require('cors');
+app.use(cors());
 
 app.use('/track', trackRouter);
 
