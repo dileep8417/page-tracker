@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const trackRouter = require('./routes/pageTrack');
+require('dotenv').config();
 require('./db').connect();
 
 app.use('/track', trackRouter);
